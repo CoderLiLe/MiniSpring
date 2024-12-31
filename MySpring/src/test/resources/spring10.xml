@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="userService" class="com.lile.springframework.test.bean.UserService10" scope="prototype">
+        <property name="uId" value="10001"/>
+        <property name="company" value="腾讯"/>
+        <property name="location" value="深圳"/>
+        <property name="user" ref="proxyUser"/>
+    </bean>
+
+    <bean id="proxyUser" class="com.lile.springframework.test.bean.ProxyBeanFactory"/>
+
+</beans>
