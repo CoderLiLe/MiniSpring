@@ -5,15 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.lile</groupId>
-    <artifactId>JavaCode</artifactId>
+    <artifactId>MiniSpring</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>JavaSE</module>
-        <module>JavaEE</module>
-        <module>Spring</module>
-        <module>SpringBoot</module>
-        <module>MySpring</module>
+        <module>mini-spring-ioc</module>
     </modules>
 
     <properties>
