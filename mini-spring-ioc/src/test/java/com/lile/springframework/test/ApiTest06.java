@@ -5,6 +5,7 @@ import com.lile.springframework.beans.factory.support.DefaultListableBeanFactory
 import com.lile.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import com.lile.springframework.core.io.DefaultResourceLoader;
 import com.lile.springframework.core.io.Resource;
+import com.lile.springframework.test.bean.UserService06;
 import com.lile.springframework.test.bean.UserService2;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,7 +39,7 @@ public class ApiTest06 {
 
     @Test
     public void test_url() throws IOException {
-        Resource resource = resourceLoader.getResource("/important.properties");
+        Resource resource = resourceLoader.getResource("https://github.com/CoderLiLe/MiniSpring/blob/master/mini-spring-ioc/src/test/resources/important.properties");
         InputStream inputStream = resource.getInputStream();
         String content = IoUtil.readUtf8(inputStream);
         System.out.println(content);
@@ -51,10 +52,10 @@ public class ApiTest06 {
 
         // 2. 读取配置文件&注册Bean
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
-        reader.loadBeanDefinitions("classpath:spring.xml");
+        reader.loadBeanDefinitions("classpath:spring06.xml");
 
         // 3. 获取Bean对象调用方法
-        UserService2 userService = (UserService2) beanFactory.getBean("userService2", UserService2.class);
+        UserService06 userService = (UserService06) beanFactory.getBean("userService06", UserService06.class);
         userService.queryUserInfo();
     }
 }
