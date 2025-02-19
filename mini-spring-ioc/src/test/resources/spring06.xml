@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
-
     <bean id="userDao" class="com.lile.springframework.test.bean.UserDao"/>
 
-    <bean id="userService2" class="com.lile.springframework.test.bean.UserService2">
+    <bean id="userService06" class="com.lile.springframework.test.bean.UserService06">
         <property name="uId" value="10001"/>
         <property name="userDao" ref="userDao"/>
     </bean>
-
 </beans>
