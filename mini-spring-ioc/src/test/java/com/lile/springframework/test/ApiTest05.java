@@ -3,7 +3,7 @@ package com.lile.springframework.test;
 import com.lile.springframework.beans.PropertyValues;
 import com.lile.springframework.beans.factory.config.BeanDefinition;
 import com.lile.springframework.beans.factory.support.DefaultListableBeanFactory;
-import com.lile.springframework.test.bean.UserService2;
+import com.lile.springframework.test.bean.UserService05;
 import com.lile.springframework.test.bean.UserDao;
 import com.lile.springframework.beans.PropertyValue;
 import com.lile.springframework.beans.factory.config.BeanReference;
@@ -25,11 +25,11 @@ public class ApiTest05 {
         propertyValues.addPropertyValue(new PropertyValue("userDao", new BeanReference("userDao")));
 
         // 4. UserService 注入bean
-        BeanDefinition beanDefinition = new BeanDefinition(UserService2.class, propertyValues);
-        beanFactory.registerBeanDefinition("userService2", beanDefinition);
+        BeanDefinition beanDefinition = new BeanDefinition(UserService05.class, propertyValues);
+        beanFactory.registerBeanDefinition("userService05", beanDefinition);
 
         // 5. UserService 获取bean
-        UserService2 userService2 = (UserService2) beanFactory.getBean("userService2");
-        userService2.queryUserInfo();
+        UserService05 userService05 = (UserService05) beanFactory.getBean("userService05");
+        userService05.queryUserInfo();
     }
 }
