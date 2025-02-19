@@ -23,7 +23,8 @@ import java.lang.reflect.Method;
  */
 public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory implements AutowireCapableBeanFactory {
 
-    private InstantiationStrategy instantiationStrategy = new ByteBuddySubclassingInstantiationStrategy();
+    //private InstantiationStrategy instantiationStrategy = new ByteBuddySubclassingInstantiationStrategy();
+    private InstantiationStrategy instantiationStrategy = new CglibSubclassingInstantiationStrategy();
 
     @Override
     protected Object createBean(String beanName, BeanDefinition beanDefinition, Object[] args) throws BeansException {

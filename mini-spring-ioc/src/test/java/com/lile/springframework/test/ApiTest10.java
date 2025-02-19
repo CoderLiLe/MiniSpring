@@ -8,11 +8,6 @@ import org.openjdk.jol.info.ClassLayout;
 public class ApiTest10 {
     @Test
     public void test_prototype() {
-        // 设置系统属性以允许 JOL 获取 Instrumentation
-        System.setProperty("jdk.attach.allowAttachSelf", "true");
-        System.setProperty("jol.tryWithSudo", "true");
-        System.setProperty("XX:+EnableDynamicAgentLoading", "");
-
         // 1. 初始化 BeanFactory
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring10.xml");
         applicationContext.registerShutdownHook();
@@ -28,7 +23,6 @@ public class ApiTest10 {
         // 4. 打印十六进制哈希
         System.out.println(userService01 + " 十六进制哈希：" + Integer.toHexString(userService01.hashCode()));
         System.out.println(ClassLayout.parseInstance(userService01).toPrintable());
-
     }
 
     @Test
