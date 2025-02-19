@@ -1,13 +1,13 @@
 package com.lile.springframework.test.bean;
 
-public class UserService3 {
+public class UserService07 {
     private String uId;
     private String company;
     private String location;
     private UserDao userDao;
 
     public String queryUserInfo() {
-        return userDao.queryUserName(uId) + "," + company + "," + location;
+        return userDao.queryUserName(uId)+", 公司："+company+", 地点"+location;
     }
 
     public String getuId() {

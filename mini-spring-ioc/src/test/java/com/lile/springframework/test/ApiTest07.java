@@ -1,20 +1,12 @@
 package com.lile.springframework.test;
 
-import cn.hutool.core.io.IoUtil;
 import com.lile.springframework.beans.factory.support.DefaultListableBeanFactory;
 import com.lile.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import com.lile.springframework.context.support.ClassPathXmlApplicationContext;
-import com.lile.springframework.core.io.DefaultResourceLoader;
-import com.lile.springframework.core.io.Resource;
-import com.lile.springframework.test.bean.UserService2;
-import com.lile.springframework.test.bean.UserService3;
+import com.lile.springframework.test.bean.UserService07;
 import com.lile.springframework.test.common.MyBeanFactoryPostProcessor;
 import com.lile.springframework.test.common.MyBeanPostProcessor;
-import org.junit.Before;
 import org.junit.Test;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class ApiTest07 {
     @Test
@@ -35,7 +27,7 @@ public class ApiTest07 {
         beanFactory.addBeanPostProcessor(beanPostProcessor);
 
         // 5. 获取Bean对象调用方法
-        UserService3 userService = beanFactory.getBean("userService3", UserService3.class);
+        UserService07 userService = beanFactory.getBean("userService07", UserService07.class);
         String result = userService.queryUserInfo();
         System.out.println("测试结果：" + result);
     }
@@ -43,10 +35,10 @@ public class ApiTest07 {
     @Test
     public void test_xml() {
         // 1.初始化 BeanFactory
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:springPostProcessor.xml");
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring07_enhance.xml");
 
         // 2. 获取Bean对象调用方法
-        UserService3 userService = applicationContext.getBean("userService3", UserService3.class);
+        UserService07 userService = applicationContext.getBean("userService07", UserService07.class);
         String result = userService.queryUserInfo();
         System.out.println("测试结果：" + result);
     }
