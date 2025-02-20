@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="userService" class="com.lile.springframework.test.bean.UserService12">
+        <property name="uId" value="10001"/>
+        <property name="company" value="北京"/>
+        <property name="location" value="五道口"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+</beans>
