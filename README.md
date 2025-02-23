@@ -15,7 +15,7 @@
 - [x] [第 11 节：基于观察者实现，容器事件和事件监听器](https://github.com/CoderLiLe/MiniSpring/blob/master/docs/11-%E5%AE%B9%E5%99%A8%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC.md)
 - [x] [第 12 节：基于JDK和Cglib动态代理，实现AOP核心功能](https://github.com/CoderLiLe/MiniSpring/blob/master/docs/12-%E5%9F%BA%E4%BA%8EJDK%E5%92%8CCglib%E5%AE%9E%E7%8E%B0AOP.md)
 - [x] [第 13 节：把AOP动态代理，融入到Bean的生命周期](https://github.com/CoderLiLe/MiniSpring/blob/master/docs/13-%E6%8A%8AAOP%E6%89%A9%E5%B1%95%E5%88%B0Bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md)
-- [ ] 第 14 节：通过注解配置和包自动扫描的方式完成Bean对象的注册
+- [x] [第 14 节：通过注解配置和包自动扫描的方式完成Bean对象的注册](https://github.com/CoderLiLe/MiniSpring/blob/master/docs/14-%E8%87%AA%E5%8A%A8%E6%89%AB%E6%8F%8FBean%E5%AF%B9%E8%B1%A1%E6%B3%A8%E5%86%8C.md)
 - [ ] 第 15 节：通过注解给属性注入配置和Bean对象
 - [ ] 第 16 节：给代理对象的属性设置值
 - [ ] 第 17 节：通过三级缓存解决循环依赖
